@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz de Autoconhecimento Sexual</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🔥 Quiz de Autoconhecimento Sexual</h1>
+      <p class="subtitle">Exploração segura • 18+ • Seus dados ficam só no seu dispositivo</p>
+    </header>
+
+    <!-- Tela inicial -->
+    <section id="start-screen">
+      <div class="card">
+        <h2>Começar ou Continuar</h2>
+        
+        <div class="upload-area">
+          <label for="file-upload" class="btn secondary">📂 Carregar progresso (.qdata)</label>
+          <input type="file" id="file-upload" accept=".qdata" hidden>
+        </div>
+
+        <div class="divider">ou</div>
+
+        <div class="mode-select">
+          <p>Escolha a quantidade de perguntas:</p>
+          <div class="mode-buttons">
+            <button class="mode-btn" data-mode="poucas">Poucas (~15)</button>
+            <button class="mode-btn active" data-mode="medio">Médias (~40)</button>
+            <button class="mode-btn" data-mode="muitas">Muitas (80+)</button>
+          </div>
+        </div>
+
+        <button id="start-btn" class="btn primary">🚀 Começar Quiz</button>
+      </div>
+    </section>
+
+    <!-- Tela do Quiz -->
+    <section id="quiz-screen" class="hidden">
+      <div class="progress-bar">
+        <div class="progress-info">
+          <span>Respondidas: <strong id="answered-count">0</strong></span>
+        </div>
+      </div>
+
+      <div id="questions-container"></div>
+
+      <div class="actions">
+        <button id="more-questions-btn" class="btn secondary">🔄 Buscar mais perguntas</button>
+        <button id="save-btn" class="btn primary">💾 Salvar progresso</button>
+      </div>
+    </section>
+
+    <!-- Mensagem final -->
+    <section id="end-screen" class="hidden">
+      <div class="card">
+        <h2>🎉 Você explorou bastante!</h2>
+        <p>Não há mais perguntas novas no momento. Você pode salvar o progresso e voltar depois.</p>
+        <button id="save-end-btn" class="btn primary">💾 Salvar progresso</button>
+        <button id="restart-btn" class="btn secondary">Recomeçar</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
